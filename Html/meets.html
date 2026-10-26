@@ -28,21 +28,59 @@
         <h2>Träffar</h2>
         <p class="intro-träffar">Hitta en hundträff i din stad, eller skapa en egen.</p>
 
-        <div class="filter-city">
+        <div class="filter-city"> //Filter för stad
             <p>Plats</p>
             <button class="filter-button">Alla</button>
             <button class="filter-button">Göteborg</button>
             <button class="filter-button">Stockholm</button>
             <button class="filter-button">Malmö</button>
         </div>
-        <div class="filter-size">
+        <div class="filter-size"> //Filter för Storlek
             <p>Storlek</p>
             <button class="filter-button">Alla</button>
             <button class="filter-button">Små</button>
             <button class="filter-button">Mellan</button>
             <button class="filter-button">Stora</button>
         </div>
-        
+
+        <div class="create-meet"> //Skapa träff section
+            <button class="button" id="create-toggle">Skapa träff</button> //Knapp som öppnar upp formuläret
+
+            <form id="create-form">
+                <div class="city">
+                    <label for="select-city">Stad</label>
+                    <select id="select-city">
+                        <option value="Göteborg">Göteborg</option>
+                        <option value="Stockholm">Stockholm</option>
+                        <option value="Malmö">Malmö</option>
+                    </select>
+                </div>
+                <div class="time-date">
+                    <label for="select-timedate">Datum & Tid</label>
+                    <input type="datetime-local" id="select-timedate">
+                </div>
+                <div class="place">
+                    <label for="select-place">Plats</label>
+                    <input type="text" id="select-place">
+                </div>
+
+                <div class="create-size">
+                    <p>Välkommna storlekar</p>
+                    <label class="check"><input type="checkbox" name="storlek" value="sma">Små</label>
+                    <label class="check"><input type="checkbox" name="storlek" value="mellan">Mellan</label>
+                    <label class="check"><input type="checkbox" name="storlek" value="stora">Stora</label>
+                </div>
+
+                <button class="button">Publicera träff</button> <!--Knapp som skickar formuläret som läggs i <div class="meetups"> -->
+
+            </form>
+        </div>
+
+        <div class="meetups">
+            //Här läggs puffar för skapade träffar.
+        </div>
+
+
     </main>
 
     <footer>
