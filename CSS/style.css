@@ -1,5 +1,24 @@
-* {
-    background-color: #FFF8E7;
+:root {
+    --darkpurple: #382252;
+    --purple: #633B8F;
+    --cream: #FFF8E7;
+    --lime: #B8E34B;
+    --darktext: #292033;
+
+}
+
+/*---Mobile first---*/
+
+
+body {
+    background-color: var(--cream);
     font-family: "Baloo 2", sans-serif; 
 
 }
+
+/*Header*/
+
+.header-web{
+    background-color: var(--darkpurple);
+}
+
