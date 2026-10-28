@@ -75,9 +75,8 @@ body {
     font-family: "baloo 2", sans-serif;
     font-weight: bold;
 }
-
+/*----start.html----*/
 /*Hero*/
-
 .hero{
     background-color: var(--purple);
     display: flex;
@@ -137,9 +136,34 @@ body {
         width: 90%;
         border-radius: 5%;
         align-self: center;
+        margin-bottom: 35px;
+    }
+}
+/*ready-to*/
+.ready-to{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    h2{
+        text-align: center;
+        color: var(--cream);
+        font-size: 32px;
+    }
+    .button {
+        color: var(--darktext);
+        text-decoration: none;
+        background-color: var(--lime);
+        border-radius: 20%;
+        align-self: center;
+        font-size: 30px;
+        padding: 10px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        
     }
 }
 
+/*Footer*/
 footer{
     background-color: var(--darkpurple);
     display: flex;
