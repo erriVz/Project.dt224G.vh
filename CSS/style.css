@@ -13,6 +13,7 @@
 body {
     background-color: var(--cream);
     font-family: "Baloo 2", sans-serif; 
+    margin: 0px;
 
 }
 
@@ -20,5 +21,31 @@ body {
 
 .header-web{
     background-color: var(--darkpurple);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    gap: 0 12px;
+    
+}
+
+.header-web img{
+    height: 120px; 
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    color: var(--cream);
+    font-size: 28px;
+    font-family: "baloo 2", sans-serif;
+    font-weight: bold;
+}
+
+.lek{
+    color: var(--cream);
+}
+.zonen{
+    color: var(--lime);
 }
 
