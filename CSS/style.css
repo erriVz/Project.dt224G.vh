@@ -26,11 +26,11 @@ body {
     flex-wrap: wrap;
     padding: 15px 0;
     gap: 0 12px;
-    
-}
 
-.header-web img{
+    img{
     height: 120px; 
+    }
+    
 }
 
 .menu-button {
@@ -48,4 +48,33 @@ body {
 .zonen{
     color: var(--lime);
 }
+
+footer{
+    background-color: var(--darkpurple);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0%;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    h3 {
+        margin: 0%;
+        font-size: 40px;
+        margin-bottom: -20px;
+    }
+    p{
+        margin: 0%;
+        color: var(--cream);
+        font-size: 12px;
+        padding-left: 2px;
+    }
+    a {
+        text-decoration: none;
+        color: var(--cream);
+        font-size: 14px;
+    }
+}
+
 
