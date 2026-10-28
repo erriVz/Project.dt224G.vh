@@ -33,6 +33,31 @@ body {
     
 }
 
+.menu{
+    display: none;
+}
+.menu.open{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 1.5em;
+    margin-top: -50px;
+    padding-bottom: -20px;
+
+    ul{
+        list-style: none;
+        text-decoration: none;
+        color: var(--cream);
+
+        li a{
+            text-decoration: none;
+            color: var(--cream);
+        }
+    }
+}
+
 .menu-button {
     background-color: transparent;
     border: none;
