@@ -17,6 +17,15 @@ body {
 
 }
 
+/*Där LekZonen text finns sätts olika färger för lek & zonen*/
+.lek{
+    color: var(--cream);
+}
+.zonen{
+    color: var(--lime);
+}
+
+
 /*Header*/
 
 .header-web{
@@ -67,12 +76,47 @@ body {
     font-weight: bold;
 }
 
-.lek{
-    color: var(--cream);
+/*Hero*/
+
+.hero{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    h2{
+        margin: 0%;
+        color: var(--cream);
+        padding-top: 10%;
+        padding-left: 10%;
+        font-size: 40px;
+        line-height: 1.1;
+    }
+    p {
+        color: var(--cream);
+        padding-left: 10%;
+        font-size: 20px;
+        line-height: 1.1;
+    }
+    img {
+        width: 80%;
+        border-radius: 5%;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    .button{
+        color: var(--darktext);
+        text-decoration: none;
+        background-color: var(--lime);
+        border-radius: 20%;
+        align-self: center;
+        font-size: 30px;
+        padding: 10px;
+        font-weight: bold;
+
+    }
 }
-.zonen{
-    color: var(--lime);
-}
+
 
 footer{
     background-color: var(--darkpurple);
