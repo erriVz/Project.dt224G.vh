@@ -308,6 +308,7 @@ body {
         display: flex;
         flex-direction: column;
         padding: 30px 20px;
+        margin-top: 0px;
 
         .input-section{
             display: flex;
