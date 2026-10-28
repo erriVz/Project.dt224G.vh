@@ -214,6 +214,7 @@ body {
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    color: var(--darktext);
     .button-create{
         background-color: var(--lime);
         border-radius: 10%;
@@ -224,6 +225,62 @@ body {
     .city, .time-date, .place, .create-size, .button-publish{
         display: none;
     }
+}
+
+.create-meet.open{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10%;
+    padding: 20px 0;
+
+    .button-create{
+        align-self: center;
+        color: var(--darktext);
+    }
+    .city, .time-date, .place, .create-size, .button-publish{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        
+        label{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #select-city, #select-timedate, #select-place{
+            border-color: var(--darkpurple);
+            height: 30px;
+            border-radius: 10%;
+
+        }
+        .check{
+            border-color: var(--darkpurple);
+            border-radius: 10%;
+        }
+        p{
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .check{
+            font-size: 20px;
+        }
+    }
+    .button-publish{
+        background-color: var(--darkpurple);
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        color: var(--cream);
+        font-weight: bold;
+        font-family: "Baloo 2", sans-serif;
+        border-radius: 30%;
+        margin-left: 20px;
+
+    }
+
 }
 
 /*----CONTACT.HTML----*/
