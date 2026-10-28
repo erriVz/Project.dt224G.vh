@@ -163,7 +163,7 @@ body {
     }
 }
 
-/*----Meets----*/
+/*----MEETS.HTML----*/
 .intro-text{
     display: flex;
     flex-direction: column;
@@ -180,6 +180,35 @@ body {
         text-align: center;
         font-size: 25px;
         margin-top: 0;
+    }
+}
+
+
+
+.filter-city, .filter-size{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    gap: 0 30px;
+    padding-left: 50px;
+
+    p{
+        font-size: 20px;
+        margin-left: -30px;
+        font-weight: bold;
+        color: var(--darktext);
+    }
+    .filter-button{
+    background-color: white;
+    border-color: var(--darkpurple);
+    border-radius: 5%;
+    font-size: 20px;
+    border-width: 2px;
+    border-radius: 10px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 1000;
+    color: var(--darktext);
     }
 }
 
