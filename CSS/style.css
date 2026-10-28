@@ -75,7 +75,7 @@ body {
     font-family: "baloo 2", sans-serif;
     font-weight: bold;
 }
-/*----start.html----*/
+/*----START.HTML----*/
 /*Hero*/
 .hero{
     background-color: var(--purple);
@@ -162,6 +162,84 @@ body {
         
     }
 }
+
+/*----CONTACT.HTML----*/
+.contact{
+    display: flex;
+    flex-direction: column;
+    color: var(--darktext);
+    h2{
+        align-self: center;
+        font-size: 50px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    p{
+        align-self: center;
+        padding-left: 20px;
+        font-size: 28px;
+        margin-top: -20px;
+    }
+
+    .contact-form{
+        background-color: white;
+        border-radius: 15%;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+
+        .input-section{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            input, textarea{
+                border-color: #292033;
+                border-radius: 10%;
+                border-width: 4px;
+            }
+            textarea{
+                height: 150px;
+            }
+        }
+
+        .button-sub{
+            background-color: var(--darkpurple);
+            color: var(--cream);
+            align-self: flex-start;
+            border: none;
+            font-size: 25px;
+            border-radius: 15%;
+            margin-top: 15px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+    }
+
+    .contact-me{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        border-radius: 15%;
+        h2{
+            font-size: 35px;
+        }
+        p {
+            font-size: 20px;
+            align-self: flex-start;
+            margin-left: 35px;
+        }
+    }
+}
+
+
 
 /*Footer*/
 footer{
