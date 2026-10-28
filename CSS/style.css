@@ -163,6 +163,26 @@ body {
     }
 }
 
+/*----Meets----*/
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    color: var(--darktext);
+    font-weight: bold;
+    h2{
+        align-self: center;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    p{
+        width: 80%;
+        align-self: center;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 0;
+    }
+}
+
 /*----CONTACT.HTML----*/
 .contact{
     display: flex;
