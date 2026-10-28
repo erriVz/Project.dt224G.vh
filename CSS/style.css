@@ -183,8 +183,6 @@ body {
     }
 }
 
-
-
 .filter-city, .filter-size{
     display: flex;
     flex-wrap: wrap;
@@ -209,6 +207,22 @@ body {
     font-family: "Baloo 2", sans-serif;
     font-weight: 1000;
     color: var(--darktext);
+    }
+}
+
+.create-meet{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    .button-create{
+        background-color: var(--lime);
+        border-radius: 10%;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Baloo 2", sans-serif;
+    }
+    .city, .time-date, .place, .create-size, .button-publish{
+        display: none;
     }
 }
 
