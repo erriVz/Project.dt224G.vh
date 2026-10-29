@@ -50,18 +50,22 @@ function publishCheck(){
     //Tömmer errormeddelanden
     missedFields.innerHTML = ""
 
+    let correct = 0;
+
     if(selectTimeDate.value === ""){ 
-        missedFields.innerHTML += "<p>Vänlig välj datum och tid"
+        missedFields.innerHTML += "<p>Vänlig välj datum och tid";
+        correct = 1;
     }
     if(selectPlace.value === ""){ 
-        missedFields.innerHTML += "<p>Vänlig välj plats för träffen"
+        missedFields.innerHTML += "<p>Vänlig välj plats för träffen";
+        correct = 1;
     }
     if(checkboxS.checked === false && checkboxM.checked === false && checkboxL.checked === false){
-        missedFields.innerHTML += "<p>Vänlig fyll i välkomna storlekar</p>"
+        missedFields.innerHTML += "<p>Vänlig fyll i välkomna storlekar</p>";
+        correct = 1;
     }
-    else {
-        return true;
-    }
+    
+    return correct === 0;
 }
 
 
