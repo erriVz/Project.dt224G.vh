@@ -20,9 +20,13 @@ const sStor = document.querySelector("#sStor")
 /*Const Skapaträff*/
 const publishButton = document.querySelector(".button-publish")
 const meetups = document.querySelector(".meetups")
+const missedFields = document.querySelector(".missedfield")
 const selectCity = document.querySelector("#select-city")
 const selectTimeDate = document.querySelector("#select-timedate")
 const selectPlace = document.querySelector("#select-place")
+const checkboxS = document.querySelector("#small")
+const checkboxM = document.querySelector("#medium")
+const checkboxL = document.querySelector("#large")
 
 let meets = [];
 
@@ -41,8 +45,24 @@ function loadMeets(){
     }
 }
 
+function publishCheck(){
 
+    //Tömmer errormeddelanden
+    missedFields.innerHTML = ""
 
+    if(selectTimeDate.value === ""){ 
+        missedFields.innerHTML += "<p>Vänlig välj datum och tid"
+    }
+    if(selectPlace.value === ""){ 
+        missedFields.innerHTML += "<p>Vänlig välj plats för träffen"
+    }
+    if(checkboxS.checked === false && checkboxM.checked === false && checkboxL.checked === false){
+        missedFields.innerHTML += "<p>Vänlig fyll i välkomna storlekar</p>"
+    }
+    else {
+        return true;
+    }
+}
 
 
 //Öppnar och stänger menyn i header på mobil
