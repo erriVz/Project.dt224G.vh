@@ -208,6 +208,10 @@ body {
     font-weight: 1000;
     color: var(--darktext);
     }
+    .filter-button.pressed{
+        background-color: var(--darktext);
+        color: var(--cream);
+    }
 }
 
 .create-meet{
