@@ -189,7 +189,7 @@ cGBG.addEventListener("click", function(event){
     cAlla.classList.remove("pressed")
     cGBG.classList.toggle("pressed")
     cSthlm.classList.remove("pressed")
-    cMal.classList.remove("pressed")
+    cMal.classList.remove("pressed") 
 } )
 cSthlm.addEventListener("click", function(event){
     event.preventDefault();
