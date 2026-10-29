@@ -291,6 +291,55 @@ body {
 
 }
 
+/*Puffar för träffar*/
+.meetups{
+    display: flex;
+    flex-direction: column;
+    .meetup-card{
+        background-color: white;
+        margin: 20px 20px;
+        border-radius: 10%;
+        .stad-storlek{
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            column-gap: 5px;
+            margin-left: 3%;
+
+            .stadpuff{
+                background-color: var(--lime);
+                font-size: 170%;
+                padding: 0 3%;
+                border-radius: 10px;
+                align-self: center;
+                margin-bottom: 2px;
+            }
+            .storlekpuff{
+                background-color: var(--cream);
+                font-size: 170%;
+                padding: 0 3%;
+                border-radius: 10px;
+                align-self: center;
+                margin-bottom: 2px;
+            }
+        }
+    
+        .platstext{
+            font-size: 300%;
+            font-weight: bold;
+            margin: 0 3%;
+
+        }
+        .datumtext{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 0 3% 3%;
+
+        } 
+    }
+
+}
+
 /*----CONTACT.HTML----*/
 .contact{
     display: flex;
