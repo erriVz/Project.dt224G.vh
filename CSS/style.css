@@ -388,6 +388,17 @@ body {
             }
         }
 
+        .contactmessage{
+            color: red;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        /*Tack meddelande*/
+        .tnxmsg {
+            color: var(--darktext);
+        }
+
         .button-sub{
             background-color: var(--darkpurple);
             color: var(--cream);
