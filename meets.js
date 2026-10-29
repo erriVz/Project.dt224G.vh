@@ -117,7 +117,8 @@ publishButton.addEventListener("click", function(event){
                     "<p class='datumtext'>" + eventMeet.timedate + "</p>" +
                 "</article>";
 
-
+        //stänger Skapa träff rutan
+        createMeet.classList.toggle("open")
     }
 
 })
