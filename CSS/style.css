@@ -254,6 +254,10 @@ body {
             border-radius: 10%;
 
         }
+        .checkboxes{
+            display: flex;
+            flex-direction: column;
+        }
         .check{
             border-color: var(--darkpurple);
             border-radius: 10%;
@@ -548,6 +552,64 @@ footer{
     }
 }
 
+.create-meet{ /*flyttar skapa knapp vänster*/
+    justify-content: start;
+    margin-left: 10%;
+}
+
+.create-meet.open{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    padding: 50px 0;
+    .button-create{
+        align-self: flex-start;
+        margin-left: 5%;
+    }
+    .cdtp-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 5%;
+        padding-top: 20px;
+        .city{
+            padding: 0;
+        }   
+        .time-date{
+            padding: 0;
+        }
+        .place{
+            padding: 0;
+        }
+        #select-city, #select-timedate, #select-place{
+            width: 350px;
+            height: 50px;
+            font-size: 20px;
+            font-family: "Baloo 2", sans-serif;
+            font-weight: bold;
+            color: var(--darktext);
+        }
+    }
+    
+    
+    .create-size{
+        margin-left: 5%;
+        padding: 20px 0px;
+        p{
+            font-size: 30px;
+        }
+        .checkboxes{
+        flex-direction: row;
+        gap: 20px;
+        label{
+            font-size: 25px;
+        }
+        }
+    }
+    .button-publish{
+        margin-left: 5%;
+    }
+}
 
 
 /*---Footer för större skärm---*/

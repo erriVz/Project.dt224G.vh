@@ -49,7 +49,7 @@
             <button class="button-create">Skapa träff</button> <!--Knapp som öppnar upp formuläret-->
 
             <form id="create-form">
-                <div class="cdtp-input">
+                <div class="cdtp-input"> <!--cdtp = City, Date&Time, Place-->
                     <div class="city">
                         <label for="select-city">Stad</label>
                         <select id="select-city">
@@ -70,9 +70,11 @@
 
                 <div class="create-size">
                     <p>Välkommna storlekar</p>
-                    <label class="check"><input type="checkbox" name="storlek" value="sma">Små</label>
-                    <label class="check"><input type="checkbox" name="storlek" value="mellan">Mellan</label>
-                    <label class="check"><input type="checkbox" name="storlek" value="stora">Stora</label>
+                    <div class="checkboxes">
+                        <label class="check"><input type="checkbox" name="storlek" value="sma">Små</label>
+                        <label class="check"><input type="checkbox" name="storlek" value="mellan">Mellan</label>
+                        <label class="check"><input type="checkbox" name="storlek" value="stora">Stora</label>
+                    </div>
                 </div>
 
                 <button class="button-publish">Publicera träff</button> <!--Knapp som skickar formuläret som läggs i <div class="meetups"> -->
