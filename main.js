@@ -87,7 +87,7 @@ function createcardMeet(){
 
     return eventMeet;
 }
-
+//EventListener som kallar function när publish knappen klickas
 publishButton.addEventListener("click", function(event){
     event.preventDefault();
 
@@ -118,6 +118,37 @@ publishButton.addEventListener("click", function(event){
                 "</article>";
 
 
+    }
+
+})
+
+//Laddar in puffar när sidan laddas in
+window.addEventListener("load", function(){
+    loadMeets();
+    for(let i=0; i<meets.length; i++){
+        let size = "";
+        if(meets[i].small===true){
+            size += "Liten ";
+        }
+        if(meets[i].medium===true){
+            size += "Mellan ";
+        }
+        if(meets[i].large===true){
+            size += "Stor ";
+        }
+        if(meets[i].small===true && meets[i].medium===true && meets[i].large===true){
+            size = "Alla storlekar"
+        }
+        
+        meetups.innerHTML += 
+                "<article class='meetup-card'>" +
+                    "<div class='stad-storlek'>" +
+                        "<p class='stadpuff'>" + meets[i].city + "</p>" +
+                        "<p class='storlekpuff'>" + size + "</p>" +
+                    "</div>" +
+                    "<p class='platstext'>" + meets[i].place + "</p>" +
+                    "<p class='datumtext'>" + meets[i].timedate + "</p>" +
+                "</article>";
     }
 
 })
