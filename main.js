@@ -71,7 +71,7 @@ function publishCheck(){
 function createcardMeet(){
     //Hämtar data från create-meet form
     const eventMeet = {
-        city: selectPlace.value,
+        city: selectCity.value,
         timedate: selectTimeDate.value,
         place: selectPlace.value,
         small: checkboxS.checked,
@@ -84,14 +84,49 @@ function createcardMeet(){
 
     //Sparar meets
     storeMeets();
+
+    return eventMeet;
 }
+
+publishButton.addEventListener("click", function(event){
+    event.preventDefault();
+
+    if(publishCheck()){
+        const eventMeet = createcardMeet();
+        let size = "";
+        if(eventMeet.small===true){
+            size += "Liten ";
+        }
+        if(eventMeet.medium===true){
+            size += "Mellan ";
+        }
+        if(eventMeet.large===true){
+            size += "Stor ";
+        }
+        if(eventMeet.small===true && eventMeet.medium===true && eventMeet.large===true){
+            size = "Alla storlekar"
+        }
+        
+        meetups.innerHTML += 
+                "<article class='meetup-card'>" +
+                    "<div class='stad-storlek'>" +
+                        "<p class='stadpuff'>" + eventMeet.city + "</p>" +
+                        "<p class='storlekpuff'>" + size + "</p>" +
+                    "</div>" +
+                    "<p class='platstext'>" + eventMeet.place + "</p>" +
+                    "<p class='datumtext'>" + eventMeet.timedate + "</p>" +
+                "</article>";
+
+
+    }
+
+})
 
 //Öppnar och stänger menyn i header på mobil
 menubutton.addEventListener("click", function(event){
     event.preventDefault();
     menu.classList.toggle("open")
 })
-
 //Öppnar och stänger Skapa träff form i meets.html
 createButton.addEventListener("click", function(event){
     event.preventDefault();
