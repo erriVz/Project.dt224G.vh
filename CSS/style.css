@@ -584,6 +584,7 @@ footer{
     flex-direction: row;
     margin-left: 10%;
     padding-left: 0;
+    gap: 0 3%;
     p{
         font-size: 40px;
         margin-left: 0;
@@ -597,6 +598,7 @@ footer{
     flex-direction: row;
     margin-left: 10%;
     padding-left: 0;
+    gap: 0 3%;
     p{
         font-size: 40px;
         margin-left: 0;
