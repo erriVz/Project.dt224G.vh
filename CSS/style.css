@@ -524,7 +524,6 @@ footer{
         font-size: 30px;
     }
 }
-
 .filter-city{
     display: flex;
     flex-direction: row;
@@ -551,12 +550,10 @@ footer{
         font-size: 30px;
     }
 }
-
 .create-meet{ /*flyttar skapa knapp vänster*/
     justify-content: start;
     margin-left: 10%;
 }
-
 .create-meet.open{
     display: flex;
     flex-direction: column;
@@ -611,6 +608,71 @@ footer{
     }
 }
 
+/*---CONTACT.HTML---*/
+.contact{
+    h2{
+        padding-top: 90px;
+        align-self: start;
+        margin-left: 10%;
+    }
+    p{
+        align-self: start;
+        margin-left: 10%; 
+        padding-left: 0;
+    }
+
+    .contact-part{
+        margin-left: 5%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+       
+        .contact-form{
+            margin: 0;
+            padding: 40px 0;
+            width: 60%;
+            .input-section{
+                margin:0 8%;
+                label{
+                    font-size: 40px;
+                }
+                input{
+                    height: 40px;
+                    font-size: 35px;
+                    font-family: "Baloo 2", sans-serif;
+                    font-weight: 600;
+                    color: var(--darktext);
+                }
+                textarea{
+                    font-size: 35px;
+                    font-family: "Baloo 2", sans-serif;
+                    font-weight: 600;
+                    color: var(--darktext);
+                }
+            }
+            .button-sub{
+                margin-left: 8%;
+            }
+        }
+        .contact-me{
+            width: 20%;
+            height: 200px;
+            margin: 0 10%;
+            padding: 40px 0;
+            h2{
+                padding: 0;
+                margin: auto;
+                text-align: center;
+            }
+            p{
+               font-size: 25px; 
+               margin: auto;
+               font-weight: bold;
+            }
+        }
+    }
+}
 
 /*---Footer för större skärm---*/
 footer{
