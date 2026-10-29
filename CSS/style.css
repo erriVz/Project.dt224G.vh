@@ -434,7 +434,6 @@ footer{
 }
 
 /*---START.HTML---*/
-
 /*Hero*/
 .hero{
     display: grid;
@@ -472,9 +471,7 @@ footer{
     }
 
 }
-
 /*About*/
-
 .about{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -503,11 +500,55 @@ footer{
     }
 
 }
-
 /*ready-to*/
 .ready-to h2{
     font-size: 40px;
 }
+
+/*---MEETS-HTML---*/
+.intro-text{
+    padding-top: 90px;
+    h2{
+        align-self: start;
+        margin-left: 10%;
+        font-size: 70px;
+    }
+    p{
+        align-self: start;
+        text-align: start;
+        margin-left: 10%;
+        font-size: 30px;
+    }
+}
+
+.filter-city{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    padding-left: 0;
+    p{
+        font-size: 40px;
+        margin-left: 0;
+    }
+    .filter-button{
+        font-size: 30px;
+    }
+}
+.filter-size{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    padding-left: 0;
+    p{
+        font-size: 40px;
+        margin-left: 0;
+    }
+    .filter-button{
+        font-size: 30px;
+    }
+}
+
+
 
 /*---Footer för större skärm---*/
 footer{
