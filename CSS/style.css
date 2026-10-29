@@ -662,6 +662,30 @@ footer{
         margin-left: 5%;
     }
 }
+/*Puffar för träffar*/
+.meetups{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 6%;
+    margin: 0 5%;
+    
+    .meetup-card{
+        background-color: white;
+        border-radius: 40px;
+        padding: 0;
+        width: 29.3%;
+        margin: 0;
+        margin-bottom: 5%;
+        .stad-storlek{
+            margin: 0 5%;
+        }
+        .platstext, .datumtext{
+            margin-left: 5%;
+        }
+    }
+}
 
 /*---CONTACT.HTML---*/
 .contact{
