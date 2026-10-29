@@ -44,7 +44,7 @@ function loadMeets(){
         meets = JSON.parse(savedMeets);
     }
 }
-
+//Function som kollar att alla required fält i create-meet är ifylld
 function publishCheck(){
 
     //Tömmer errormeddelanden
@@ -53,11 +53,11 @@ function publishCheck(){
     let correct = 0;
 
     if(selectTimeDate.value === ""){ 
-        missedFields.innerHTML += "<p>Vänlig välj datum och tid";
+        missedFields.innerHTML += "<p>Vänlig välj datum och tid</p>";
         correct = 1;
     }
     if(selectPlace.value === ""){ 
-        missedFields.innerHTML += "<p>Vänlig välj plats för träffen";
+        missedFields.innerHTML += "<p>Vänlig välj plats för träffen</p>";
         correct = 1;
     }
     if(checkboxS.checked === false && checkboxM.checked === false && checkboxL.checked === false){
@@ -67,7 +67,24 @@ function publishCheck(){
     
     return correct === 0;
 }
+//Function som skapar ett object med information från create-meet formuläret
+function createcardMeet(){
+    //Hämtar data från create-meet form
+    const eventMeet = {
+        city: selectPlace.value,
+        timedate: selectTimeDate.value,
+        place: selectPlace.value,
+        small: checkboxS.checked,
+        medium: checkboxM.checked,
+        large: checkboxL.checked,
+    };
 
+    //Lägger eventMeet i meets
+    meets.push(eventMeet);
+
+    //Sparar meets
+    storeMeets();
+}
 
 //Öppnar och stänger menyn i header på mobil
 menubutton.addEventListener("click", function(event){
