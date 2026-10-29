@@ -17,6 +17,34 @@ const sSma = document.querySelector("#sSma")
 const sMel = document.querySelector("#sMel")
 const sStor = document.querySelector("#sStor")
 
+/*Const Skapaträff*/
+const publishButton = document.querySelector(".button-publish")
+const meetups = document.querySelector(".meetups")
+const selectCity = document.querySelector("#select-city")
+const selectTimeDate = document.querySelector("#select-timedate")
+const selectPlace = document.querySelector("#select-place")
+
+let meets = [];
+
+//Sparar meets i localstorage
+function storeMeets(){
+    localStorage.setItem("meets", JSON.stringify(meets));
+}
+//Läser in meets från localstorage
+function loadMeets(){
+    //Hämtar eventuell sparad meets
+    const savedMeets = localStorage.getItem("meets")
+
+    //uppdaterar meets[]
+    if (savedMeets){
+        meets = JSON.parse(savedMeets);
+    }
+}
+
+
+
+
+
 //Öppnar och stänger menyn i header på mobil
 menubutton.addEventListener("click", function(event){
     event.preventDefault();
