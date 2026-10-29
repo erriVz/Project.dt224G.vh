@@ -7,7 +7,15 @@ const createMeet = document.querySelector(".create-meet")
 const createButton = document.querySelector(".button-create")
 
 /*Sortering plats & storlek const*/
+const cAlla = document.querySelector("#cAlla")
+const cGBG = document.querySelector("#cGBG")
+const cSthlm = document.querySelector("#cSthlm")
+const cMal = document.querySelector("#cMal")
 
+const sAlla = document.querySelector("#sAlla")
+const sAllaSma = document.querySelector("#sSma")
+const sAllaMel = document.querySelector("#sMel")
+const sStor = document.querySelector("#sStor")
 
 menubutton.addEventListener("click", function(event){
     event.preventDefault();
