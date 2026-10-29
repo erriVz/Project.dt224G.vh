@@ -17,11 +17,13 @@ const sAllaSma = document.querySelector("#sSma")
 const sAllaMel = document.querySelector("#sMel")
 const sStor = document.querySelector("#sStor")
 
+//Öppnar och stänger menyn i header på mobil
 menubutton.addEventListener("click", function(event){
     event.preventDefault();
     menu.classList.toggle("open")
 })
 
+//Öppnar och stänger Skapa träff form i meets.html
 createButton.addEventListener("click", function(event){
     event.preventDefault();
     createMeet.classList.toggle("open")
