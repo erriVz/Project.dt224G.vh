@@ -6,12 +6,12 @@ const menu = document.querySelector(".menu")
 const createMeet = document.querySelector(".create-meet")
 const createButton = document.querySelector(".button-create")
 
-/*Sortering plats & storlek const*/
+/*Sortering plats const*/
 const cAlla = document.querySelector("#cAlla")
 const cGBG = document.querySelector("#cGBG")
 const cSthlm = document.querySelector("#cSthlm")
 const cMal = document.querySelector("#cMal")
-
+/*Sortering storlek const*/
 const sAlla = document.querySelector("#sAlla")
 const sSma = document.querySelector("#sSma")
 const sMel = document.querySelector("#sMel")
@@ -50,6 +50,7 @@ function publishCheck(){
     //Tömmer errormeddelanden
     missedFields.innerHTML = ""
 
+    //variabel som eventuellt om en if går genom sätts till 1 vilket inte kommer att ge retun = true
     let correct = 0;
 
     if(selectTimeDate.value === ""){ 
@@ -64,7 +65,7 @@ function publishCheck(){
         missedFields.innerHTML += "<p>Vänlig fyll i välkomna storlekar</p>";
         correct = 1;
     }
-    
+    //return true om correct är lika med 0
     return correct === 0;
 }
 //Function som skapar ett object med information från create-meet formuläret
@@ -84,7 +85,7 @@ function createcardMeet(){
 
     //Sparar meets
     storeMeets();
-
+    //returnerar eventMeet för användning i annan function
     return eventMeet;
 }
 //EventListener som kallar function när publish knappen klickas
@@ -92,23 +93,27 @@ publishButton.addEventListener("click", function(event){
     event.preventDefault();
 
     if(publishCheck()){
+        //eventMeet får värder som returneras från createcardMeet samtidgt som function kallas
         const eventMeet = createcardMeet();
+        //variabel som genom if statements får en string med Hundstorlek
         let size = "";
         if(eventMeet.small===true){
-            size += "Liten ";
+            size += "Liten "; //Lägger till "liten" till size
         }
         if(eventMeet.medium===true){
-            size += "Mellan ";
+            size += "Mellan "; //Lägger till "mellan" till size
         }
         if(eventMeet.large===true){
-            size += "Stor ";
+            size += "Stor "; //Lägger till "stor" till size
         }
+        //Om alla checkboxar är ifyllda blir size = "Alla storlekar"
         if(eventMeet.small===true && eventMeet.medium===true && eventMeet.large===true){
             size = "Alla storlekar"
         }
         
+        //Skapar Träff puff och lägger i meetups div i html filen
         meetups.innerHTML += 
-                "<article class='meetup-card'>" +
+                "<article class='meetup-card'"+eventMeet.city + size + ">" +
                     "<div class='stad-storlek'>" +
                         "<p class='stadpuff'>" + eventMeet.city + "</p>" +
                         "<p class='storlekpuff'>" + size + "</p>" +
@@ -126,7 +131,7 @@ publishButton.addEventListener("click", function(event){
 //Laddar in puffar när sidan laddas in
 window.addEventListener("load", function(){
     loadMeets();
-    for(let i=0; i<meets.length; i++){
+    for(let i=0; i<meets.length; i++){ //Loop som gå genom meet historik och skriver ut alla till DOM
         let size = "";
         if(meets[i].small===true){
             size += "Liten ";
@@ -142,7 +147,7 @@ window.addEventListener("load", function(){
         }
         
         meetups.innerHTML += 
-                "<article class='meetup-card'>" +
+                "<article class='meetup-card' id='" + meets[i].city + size +"'>" +
                     "<div class='stad-storlek'>" +
                         "<p class='stadpuff'>" + meets[i].city + "</p>" +
                         "<p class='storlekpuff'>" + size + "</p>" +
@@ -165,6 +170,10 @@ createButton.addEventListener("click", function(event){
     createMeet.classList.toggle("open")
 })
 
+
+//Const för sortering av puffar//
+
+
 //Ändrar utseende på buttons Plats när klickade för att se vad som är valt
 cAlla.addEventListener("click", function(event){
     event.preventDefault();
@@ -172,6 +181,8 @@ cAlla.addEventListener("click", function(event){
     cGBG.classList.remove("pressed")
     cSthlm.classList.remove("pressed")
     cMal.classList.remove("pressed")
+
+
 } )
 cGBG.addEventListener("click", function(event){
     event.preventDefault();
