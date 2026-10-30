@@ -205,7 +205,7 @@ cMal.addEventListener("click", function(event){
     cSthlm.classList.remove("pressed")
     cMal.classList.toggle("pressed")
 } )
-
+/*----Temporärt disabled
 //Ändrar utseende på buttons Storlek när klickade för att se vad som är valt
 sAlla.addEventListener("click", function(event){
     event.preventDefault();
@@ -234,4 +234,4 @@ sStor.addEventListener("click", function(event){
     sSma.classList.remove("pressed")
     sMel.classList.remove("pressed")
     sStor.classList.toggle("pressed")
-} )
+} )*/
