@@ -41,7 +41,7 @@ contactButton.addEventListener("click", function(event){
     event.preventDefault();
 
     if(checkContact()){
-        contactmessage.innerHTML = "<p class='tnxmsg'>Vi besvara din fråga så for vi kan :)</p>"
+        contactmessage.innerHTML = "<p class='tnxmsg'>Vi besvarar din fråga så fort vi kan :)</p>"
         const contactQ = {
             name: cName.value,
             email: cEmail.value,
