@@ -71,13 +71,13 @@ function publishCheck(){
 //Function som kollar om en sortering knapp stad är "pressed"/klickad och return stad annars return alla
 function chosenCity(){
     if(cGBG.classList.contains("pressed")){
-        return "göteborg";
+        return "Göteborg";
     };
     if(cSthlm.classList.contains("pressed")){
-        return "stockholm";
+        return "Stockholm";
     };
     if(cMal.classList.contains("pressed")){
-        return "malmö";
+        return "Malmö";
     };
     return "alla";
 }
