@@ -17,7 +17,15 @@ body {
     box-sizing: border-box;
     max-width: 100%;
     padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 
+}
+/*main tar all ledig plats mellan header of footer*/
+main{
+    flex:1;
 }
 
 /*Där LekZonen text i header & footer sätts olika färger för lek & zonen*/
@@ -295,13 +303,12 @@ body {
 
 /*Puffar för träffar*/
 .meetups{
-    display: flex;
-    flex-direction: column;
     .Göteborg, .Stockholm, .Malmö{
         display: none;
     }
     .Göteborg.show, .Stockholm.show, .Malmö.show{
         display: flex;
+        flex-direction: column;
         background-color: white;
         margin: 20px 20px;
         border-radius: 10%;
@@ -688,7 +695,7 @@ footer{
     column-gap: 6%;
     margin: 0 5%;
     
-    .meetup-card{
+    .Göteborg.show, .Stockholm.show, .Malmö.show{
         background-color: white;
         border-radius: 40px;
         padding: 0;
