@@ -68,6 +68,35 @@ function publishCheck(){
     //return true om correct är lika med 0
     return correct === 0;
 }
+//Function som kollar om en sortering knapp stad är "pressed"/klickad och return stad annars return alla
+function chosenCity(){
+    if(cGBG.classList.contains("pressed")){
+        return "göteborg";
+    };
+    if(cSthlm.classList.contains("pressed")){
+        return "stockholm";
+    };
+    if(cMal.classList.contains("pressed")){
+        return "malmö";
+    };
+    return "alla";
+}
+
+//function som sorterar vilka meet puffar som skall visas
+function sortMeets(city){
+    const cardMeet = document.querySelectorAll(".meetups article")
+
+    for (let i=0; i<cardMeet.length; i++){
+        //Tar bort eventuellt show från class
+        cardMeet[i].classList.remove("show");
+
+        //om city = "alla" eller article class i .meetups innehåller samma stad läggs "show" till i klassen
+        if(city === "alla" || cardMeet[i].classList.contains(city)){
+            cardMeet[i].classList.add("show");
+        }
+    }
+}
+
 //Function som skapar ett object med information från create-meet formuläret
 function createcardMeet(){
     //Hämtar data från create-meet form
@@ -113,7 +142,7 @@ publishButton.addEventListener("click", function(event){
         
         //Skapar Träff puff och lägger i meetups div i html filen
         meetups.innerHTML += 
-                "<article class='meetup-card'"+eventMeet.city + size + ">" +
+                "<article class="+eventMeet.city + ">" +
                     "<div class='stad-storlek'>" +
                         "<p class='stadpuff'>" + eventMeet.city + "</p>" +
                         "<p class='storlekpuff'>" + size + "</p>" +
@@ -124,6 +153,9 @@ publishButton.addEventListener("click", function(event){
 
         //stänger Skapa träff rutan
         createMeet.classList.toggle("open")
+
+        //Sorterar om alla puffar
+        sortMeets(chosenCity());
     }
 
 })
@@ -147,7 +179,7 @@ window.addEventListener("load", function(){
         }
         
         meetups.innerHTML += 
-                "<article class='meetup-card' id='" + meets[i].city + size +"'>" +
+                "<article class="+meets[i].city+">" +
                     "<div class='stad-storlek'>" +
                         "<p class='stadpuff'>" + meets[i].city + "</p>" +
                         "<p class='storlekpuff'>" + size + "</p>" +
@@ -156,6 +188,8 @@ window.addEventListener("load", function(){
                     "<p class='datumtext'>" + meets[i].timedate + "</p>" +
                 "</article>";
     }
+    //sorterar alla meet puffar från början
+    sortMeets(chosenCity());
 
 })
 
@@ -171,9 +205,6 @@ createButton.addEventListener("click", function(event){
 })
 
 
-//Const för sortering av puffar//
-
-
 //Ändrar utseende på buttons Plats när klickade för att se vad som är valt
 cAlla.addEventListener("click", function(event){
     event.preventDefault();
@@ -182,28 +213,49 @@ cAlla.addEventListener("click", function(event){
     cSthlm.classList.remove("pressed")
     cMal.classList.remove("pressed")
 
-
+    sortMeets(chosenCity());
 } )
 cGBG.addEventListener("click", function(event){
     event.preventDefault();
     cAlla.classList.remove("pressed")
-    cGBG.classList.toggle("pressed")
     cSthlm.classList.remove("pressed")
     cMal.classList.remove("pressed")
+
+    //if else del för toggle 
+    if(cGBG.classList.contains("pressed")){
+        cGBG.classList.remove("pressed")
+    }
+    else{cGBG.classList.add("pressed")}
+
+    sortMeets(chosenCity());
 } )
 cSthlm.addEventListener("click", function(event){
     event.preventDefault();
     cAlla.classList.remove("pressed")
     cGBG.classList.remove("pressed")
-    cSthlm.classList.toggle("pressed")
     cMal.classList.remove("pressed")
+
+    //if else del för toggle 
+    if(cSthlm.classList.contains("pressed")){
+        cSthlm.classList.remove("pressed")
+    }
+    else{cSthlm.classList.add("pressed")}
+
+    sortMeets(chosenCity());
 } )
 cMal.addEventListener("click", function(event){
     event.preventDefault();
     cAlla.classList.remove("pressed")
     cGBG.classList.remove("pressed")
     cSthlm.classList.remove("pressed")
-    cMal.classList.toggle("pressed")
+    
+    //if else del för toggle 
+    if(cMal.classList.contains("pressed")){
+        cMal.classList.remove("pressed")
+    }
+    else{cMal.classList.add("pressed")}
+
+    sortMeets(chosenCity());
 } )
 /*----Temporärt disabled
 //Ändrar utseende på buttons Storlek när klickade för att se vad som är valt

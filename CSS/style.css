@@ -297,7 +297,11 @@ body {
 .meetups{
     display: flex;
     flex-direction: column;
-    .meetup-card{
+    .Göteborg, .Stockholm, .Malmö{
+        display: none;
+    }
+    .Göteborg.show, .Stockholm.show, .Malmö.show{
+        display: flex;
         background-color: white;
         margin: 20px 20px;
         border-radius: 10%;
