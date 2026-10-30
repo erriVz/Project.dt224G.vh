@@ -235,6 +235,8 @@ main{
         font-size: 30px;
         font-weight: bold;
         font-family: "Baloo 2", sans-serif;
+        color: var(--darktext);
+        text-decoration: none;
     }
     .city, .time-date, .place, .create-size, .button-publish{
         display: none;
