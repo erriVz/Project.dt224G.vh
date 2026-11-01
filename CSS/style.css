@@ -251,6 +251,12 @@ main{
     border-radius: 10%;
     padding: 20px 0;
 
+    .missedfield{
+        margin-left: 5%;
+        color: red;
+        font-weight: bold;
+    }
+
     .button-create{
         align-self: center;
         color: var(--darktext);
